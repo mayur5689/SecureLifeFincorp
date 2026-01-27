@@ -6,24 +6,28 @@ const services = [
     {
         number: "01",
         title: "Personal Financial Planning",
+        slug: "personal-financial-planning",
         description: "Customized strategies to help individuals secure financial stability and meet life goals.",
         image: "/images/service/pexels-photo-4308045.jpeg",
     },
     {
         number: "02",
         title: "Business Financial Planning",
+        slug: "business-financial-planning",
         description: "Helping business owners optimize cash-flow and navigate financial challenges.",
         image: "/images/service/pexels-photo-6476260.jpeg",
     },
     {
         number: "03",
         title: "Insurance Services",
+        slug: "insurance-services",
         description: "Ensuring you and your business are protected against unforeseen risks.",
         image: "/images/service/pexels-photo-7567432.jpeg",
     },
     {
         number: "04",
         title: "Tax & Investment Options",
+        slug: "tax-investment-options",
         description: "Diverse options tailored to your risk profile and financial goals.",
         image: "/images/service/pexels-photo-8297031.jpeg",
     },
@@ -58,10 +62,7 @@ export function Services() {
                 {/* Services Grid - Horizontal Scroll on Mobile, 4 Columns on Desktop */}
                 <div className="flex lg:grid lg:grid-cols-4 gap-6 overflow-x-auto lg:overflow-x-visible pb-8 lg:pb-0 scrollbar-hide px-5 -mx-5 lg:px-0 lg:mx-0 snap-x snap-mandatory">
                     {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className="group relative flex-shrink-0 w-[85vw] sm:w-[45vw] lg:w-auto h-[420px] rounded-[32px] overflow-hidden flex flex-col justify-end p-8 border border-neutral-100 dark:border-white/5 shadow-sm hover:shadow-2xl transition-all duration-500 snap-center"
-                        >
+                        <Link key={index} href={`/services/${service.slug}`} className="group relative flex-shrink-0 w-[85vw] sm:w-[45vw] lg:w-auto h-[420px] rounded-[32px] overflow-hidden flex flex-col justify-end p-8 border border-neutral-100 dark:border-white/5 shadow-sm hover:shadow-2xl transition-all duration-500 snap-center cursor-pointer">
                             {/* Background Image */}
                             <Image
                                 src={service.image}
@@ -96,7 +97,7 @@ export function Services() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
