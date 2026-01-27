@@ -20,9 +20,9 @@
     @apply max-w-full overflow-x-hidden font-outfit text-black bg-white antialiased transition-colors duration-300;
   }
 
-  /* Core dark mode backgrounds */
   .dark body {
-    @apply bg-[#0a0a0a] text-white;
+    background-color: #0c0c0c;
+    color: #ffffff;
   }
 
   a {

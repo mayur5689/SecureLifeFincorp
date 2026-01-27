@@ -7,7 +7,7 @@ export function Hero() {
                 <div className="w-full h-full bg-brand-green rounded-[40px] relative overflow-hidden px-10 md:px-20 pt-20 flex flex-col">
                     <div className="max-w-[700px] z-10">
                         <h1 className="text-4xl md:text-6xl lg:text-[72px] font-bold leading-[1.1] text-black mb-6">
-                            A perfect <span className="bg-white px-4 rounded-lg inline-block">insurance</span> plan created just for you.
+                            A perfect <span className="bg-white text-black px-4 rounded-lg inline-block">insurance</span> plan created just for you.
                         </h1>
                         <p className="text-lg leading-relaxed text-black/80 mb-10 max-w-[500px]">
                             Lorem ipsum dolor sit amet consectetur tristique viverra facilisis et nulla

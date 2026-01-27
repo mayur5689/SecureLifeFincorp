@@ -38,7 +38,7 @@ export function Footer() {
             </div>
 
             {/* Main Footer Section */}
-            <div className="bg-[#050A18] pt-48 pb-10 text-white">
+            <div className="bg-[#050A18] dark:bg-black pt-48 pb-10 text-white transition-colors duration-300">
                 <div className="max-w-[1250px] mx-auto px-5">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20 border-b border-white/5 pb-20">
 
