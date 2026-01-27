@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, Shield, TrendingUp, Briefcase, Users } from "lucide-react";
 
@@ -142,30 +143,7 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* Final Call to Action */}
-            <section className="py-24 px-5">
-                <div className="max-w-[1250px] mx-auto bg-brand-green rounded-[50px] p-12 md:p-24 text-center space-y-10 overflow-hidden relative">
-                    {/* Decorative background circle */}
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
-
-                    <div className="relative z-10 space-y-6">
-                        <h2 className="text-4xl md:text-6xl font-bold text-black leading-tight">
-                            Ready to Secure Your <br /> Financial Future?
-                        </h2>
-                        <p className="text-xl text-black/70 max-w-2xl mx-auto font-medium">
-                            Join thousands of clients who trust SecureLife Fincorp for their financial planning and insurance needs.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-                            <button className="bg-black text-white px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl">
-                                Get Started Today
-                            </button>
-                            <button className="bg-white text-black px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl">
-                                Contact Support
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Footer />
         </main>
     );
 }
