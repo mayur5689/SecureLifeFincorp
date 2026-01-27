@@ -24,7 +24,7 @@ const blogPosts = [
 
 export function Blog() {
     return (
-        <section className="w-full py-16 bg-white">
+        <section className="w-full py-16 bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
             <div className="max-w-[1250px] mx-auto px-5">
 
                 {/* Header */}
@@ -34,8 +34,8 @@ export function Blog() {
                             Articles
                         </span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-black tracking-tight max-w-2xl mx-auto leading-tight">
-                        Insurance <span className="bg-brand-green px-3 rounded-lg inline-block">insights and tips</span>
+                    <h2 className="text-3xl md:text-5xl font-bold text-black dark:text-white tracking-tight max-w-2xl mx-auto leading-tight">
+                        Insurance <span className="bg-brand-green px-3 rounded-lg inline-block text-black">insights and tips</span>
                     </h2>
                 </div>
 

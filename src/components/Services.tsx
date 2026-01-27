@@ -31,19 +31,19 @@ const services = [
 
 export function Services() {
     return (
-        <section className="w-full py-20 bg-white">
+        <section className="w-full py-20 bg-white dark:bg-black transition-colors duration-300">
             <div className="max-w-[1250px] mx-auto px-5">
                 {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-2 border-b border-neutral-100 pb-12">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-2 border-b border-neutral-100 dark:border-white/10 pb-12">
                     <div className="space-y-4 max-w-3xl">
                         <div className="flex items-center gap-2">
                             <div className="w-8 h-[2px] bg-brand-green"></div>
-                            <span className="text-black/50 font-bold uppercase tracking-[0.2em] text-xs">
+                            <span className="text-black/50 dark:text-white/50 font-bold uppercase tracking-[0.2em] text-xs">
                                 Our Solutions
                             </span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold leading-[1.1] text-black tracking-tight">
-                            Comprehensive Financial Solutions for You & <span className="bg-brand-green px-2 rounded-lg inline-block">Your Business</span>
+                        <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold leading-[1.1] text-black dark:text-white tracking-tight">
+                            Comprehensive Financial Solutions for You & <span className="bg-brand-green px-2 rounded-lg inline-block text-black">Your Business</span>
                         </h2>
                     </div>
                     <div className="flex-shrink-0">

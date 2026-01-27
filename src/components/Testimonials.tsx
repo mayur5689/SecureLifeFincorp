@@ -57,10 +57,10 @@ export function Testimonials() {
     const row2 = [...[...testimonials].reverse(), ...[...testimonials].reverse()];
 
     return (
-        <section className="w-full py-24 bg-neutral-50 overflow-hidden">
+        <section className="w-full py-24 bg-neutral-50 dark:bg-[#0a0a0a] overflow-hidden transition-colors duration-300">
             <div className="max-w-[1250px] mx-auto px-5 mb-16 text-center space-y-4">
-                <h2 className="text-4xl md:text-5xl font-bold text-black">
-                    Don't take our word for it, <span className="bg-brand-green px-3 rounded-lg">take theirs.</span>
+                <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white">
+                    Don't take our word for it, <span className="bg-brand-green px-3 rounded-lg text-black">take theirs.</span>
                 </h2>
                 <p className="text-neutral-500 max-w-2xl mx-auto">
                     Join thousands of satisfied clients who have secured their financial future with SecureLife Fincorp.
@@ -92,20 +92,20 @@ export function Testimonials() {
 
 function TestimonialCard({ item }: { item: typeof testimonials[0] }) {
     return (
-        <div className="flex-shrink-0 w-[400px] bg-white p-8 rounded-[32px] border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
+        <div className="flex-shrink-0 w-[400px] bg-white dark:bg-black p-8 rounded-[32px] border border-neutral-100 dark:border-white/5 shadow-sm hover:shadow-md transition-all">
             <div className="flex justify-between items-start mb-6">
                 <div className="flex gap-4">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden">
                         <Image src={item.image} alt={item.name} fill className="object-cover" />
                     </div>
                     <div>
-                        <h4 className="font-bold text-black">{item.name}</h4>
+                        <h4 className="font-bold text-black dark:text-white">{item.name}</h4>
                         <p className="text-sm text-neutral-400">{item.handle}</p>
                     </div>
                 </div>
                 <Twitter className="w-5 h-5 text-brand-green" />
             </div>
-            <p className="text-neutral-600 leading-relaxed whitespace-normal">
+            <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed whitespace-normal">
                 {item.text}
             </p>
         </div>

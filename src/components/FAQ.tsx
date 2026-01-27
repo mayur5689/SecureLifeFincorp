@@ -35,15 +35,15 @@ export function FAQ() {
     };
 
     return (
-        <section className="w-full py-20 bg-white">
+        <section className="w-full py-20 bg-white dark:bg-black transition-colors duration-300">
             <div className="max-w-[1250px] mx-auto px-5">
                 <div className="grid lg:grid-cols-[1fr_400px] gap-12 lg:gap-20 items-start">
 
                     {/* Left Column: FAQ List */}
                     <div className="space-y-12">
                         <div className="space-y-4">
-                            <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight">
-                                Frequently Asked <span className="bg-brand-green px-3 rounded-lg inline-block">Questions</span>
+                            <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white leading-tight">
+                                Frequently Asked <span className="bg-brand-green px-3 rounded-lg inline-block text-black">Questions</span>
                             </h2>
                             <p className="text-neutral-500 max-w-lg leading-relaxed">
                                 Discover quick answers to common queries in our comprehensive Frequently Asked Questions section
@@ -57,7 +57,7 @@ export function FAQ() {
                                         onClick={() => toggleFAQ(index)}
                                         className="w-full flex justify-between items-center text-left group"
                                     >
-                                        <span className={`text-xl font-bold transition-colors duration-300 ${openIndex === index ? 'text-brand-green' : 'text-black group-hover:text-brand-green'}`}>
+                                        <span className={`text-xl font-bold transition-colors duration-300 ${openIndex === index ? 'text-brand-green' : 'text-black dark:text-white group-hover:text-brand-green'}`}>
                                             {faq.question}
                                         </span>
                                         <div className={`w-8 h-8 rounded-full border border-black/10 flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'bg-brand-green text-black border-brand-green rotate-180' : 'text-black'}`}>

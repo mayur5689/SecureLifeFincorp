@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function Hero() {
     return (
-        <section className="w-full min-h-screen flex items-center justify-center p-5 pt-[100px] bg-white">
+        <section className="w-full min-h-screen flex items-center justify-center p-5 pt-[100px] bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
             <div className="w-full max-w-[1400px] h-[calc(100vh-140px)] min-h-[600px] relative">
                 <div className="w-full h-full bg-brand-green rounded-[40px] relative overflow-hidden px-10 md:px-20 pt-20 flex flex-col">
                     <div className="max-w-[700px] z-10">
