@@ -8,7 +8,7 @@ export function Footer() {
         <footer className="w-full relative mt-40">
             {/* Upper CTA Section (Overlapping) */}
             <div className="max-w-[1250px] mx-auto px-5 relative z-20 -mb-28">
-                <div className="bg-brand-green rounded-[40px] p-12 md:p-20 text-center space-y-8 relative overflow-hidden shadow-2xl">
+                <div className="bg-brand-green rounded-[40px] px-6 py-16 md:p-20 text-center space-y-8 relative overflow-hidden shadow-2xl">
                     {/* Modern Grid Pattern Overlay (Centered & Fading) */}
                     <div className="absolute inset-0 opacity-[0.12] pointer-events-none"
                         style={{
@@ -20,18 +20,18 @@ export function Footer() {
                     </div>
 
                     <div className="relative z-10 space-y-4">
-                        <span className="text-black/60 font-bold uppercase tracking-widest text-sm">
+                        <span className="text-black/60 font-bold uppercase tracking-widest text-[10px] md:text-sm">
                             Let's work together
                         </span>
-                        <h2 className="text-4xl md:text-6xl font-bold text-black tracking-tight">
+                        <h2 className="text-3xl md:text-6xl font-bold text-black tracking-tight">
                             Get in Touch with Us!
                         </h2>
-                        <p className="text-black/70 max-w-xl mx-auto text-lg font-medium">
+                        <p className="text-black/70 max-w-xl mx-auto text-base md:text-lg font-medium">
                             Subscribe to our newsletter and get cutting-edge insights delivered to your inbox.
                         </p>
                     </div>
 
-                    <button className="relative z-10 bg-[#0D121F] text-white px-10 py-5 rounded-2xl font-bold text-lg transition-transform hover:scale-105 active:scale-95 shadow-xl">
+                    <button className="relative z-10 bg-[#0D121F] text-white px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg transition-transform hover:scale-105 active:scale-95 shadow-xl">
                         Get In touch
                     </button>
                 </div>
@@ -40,7 +40,7 @@ export function Footer() {
             {/* Main Footer Section */}
             <div className="bg-[#050A18] dark:bg-black pt-48 pb-10 text-white transition-colors duration-300">
                 <div className="max-w-[1250px] mx-auto px-5">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20 border-b border-white/5 pb-20">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
 
                         {/* Logo & Info */}
                         <div className="space-y-8">
@@ -67,7 +67,7 @@ export function Footer() {
                         </div>
 
                         {/* Product Links */}
-                        <div>
+                        <div className="sm:pl-8">
                             <h4 className="text-xl font-bold mb-8 relative inline-block">
                                 Product
                                 <div className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand-green"></div>
@@ -85,7 +85,7 @@ export function Footer() {
                         </div>
 
                         {/* Utility Pages */}
-                        <div>
+                        <div className="lg:pl-8">
                             <h4 className="text-xl font-bold mb-8 relative inline-block">
                                 Utility Pages
                                 <div className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand-green"></div>
@@ -115,7 +115,7 @@ export function Footer() {
                                         placeholder="Email"
                                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-sm focus:outline-none focus:border-brand-green transition-colors"
                                     />
-                                    <button className="w-full bg-brand-green text-black font-bold py-4 rounded-xl hover:bg-white transition-colors">
+                                    <button className="w-full bg-brand-green text-black font-bold py-4 rounded-xl hover:bg-white transition-colors active:scale-[0.98]">
                                         Subscribe
                                     </button>
                                 </form>
@@ -125,8 +125,8 @@ export function Footer() {
                     </div>
 
                     {/* Bottom Bar */}
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-500 text-xs md:text-sm font-medium">
-                        <p>
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-500 text-xs md:text-sm font-medium border-t border-white/5 pt-10">
+                        <p className="text-center md:text-left">
                             Copyright © SecureLife Fincorp | Designed By <span className="text-white">Aneeverse</span>
                         </p>
                         <div className="flex gap-8">

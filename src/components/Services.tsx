@@ -55,12 +55,12 @@ export function Services() {
                     </div>
                 </div>
 
-                {/* Services Grid - 4 Columns for one-screen fit */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Services Grid - Horizontal Scroll on Mobile, 4 Columns on Desktop */}
+                <div className="flex lg:grid lg:grid-cols-4 gap-6 overflow-x-auto lg:overflow-x-visible pb-8 lg:pb-0 scrollbar-hide px-5 -mx-5 lg:px-0 lg:mx-0 snap-x snap-mandatory">
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="group relative h-[420px] rounded-[32px] overflow-hidden flex flex-col justify-end p-8 border border-neutral-100 shadow-sm hover:shadow-2xl transition-all duration-500"
+                            className="group relative flex-shrink-0 w-[85vw] sm:w-[45vw] lg:w-auto h-[420px] rounded-[32px] overflow-hidden flex flex-col justify-end p-8 border border-neutral-100 dark:border-white/5 shadow-sm hover:shadow-2xl transition-all duration-500 snap-center"
                         >
                             {/* Background Image */}
                             <Image

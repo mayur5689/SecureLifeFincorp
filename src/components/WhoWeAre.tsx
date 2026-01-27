@@ -4,52 +4,10 @@ import { Target, ShieldCheck, Star } from 'lucide-react';
 export function WhoWeAre() {
     return (
         <section className="w-full py-24 bg-[#0a0a0a] text-white overflow-hidden">
-            <div className="max-w-[1250px] mx-auto px-5 grid lg:grid-cols-2 gap-20 items-center">
+            <div className="max-w-[1250px] mx-auto px-5 flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
-                {/* Left Side: Image Visuals with distinct styling from 1st image */}
-                <div className="relative">
-                    {/* Decorative background shape */}
-                    <div className="absolute top-10 left-[-20px] w-full h-full bg-brand-green/10 rounded-[40px] rotate-[-6deg] z-0 border border-brand-green/20"></div>
-
-                    {/* Main Image */}
-                    <div className="relative z-10 rounded-[32px] overflow-hidden shadow-2xl border border-white/10">
-                        <Image
-                            src="/images/service/pexels-photo-6476260.jpeg"
-                            alt="Team meeting"
-                            width={600}
-                            height={700}
-                            className="object-cover h-[600px] w-full"
-                        />
-                    </div>
-
-                    {/* Floating Review Card */}
-                    <div className="absolute bottom-10 -right-10 z-20 bg-white p-6 rounded-2xl shadow-xl max-w-[240px] animate-fade-in-up">
-                        <div className="flex -space-x-3 mb-4">
-                            {[
-                                "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&h=100&auto=format&fit=crop",
-                                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&h=100&auto=format&fit=crop",
-                                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&h=100&auto=format&fit=crop",
-                                "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&h=100&auto=format&fit=crop"
-                            ].map((url, i) => (
-                                <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-neutral-200 overflow-hidden relative">
-                                    <Image src={url} alt="user" fill className="object-cover" />
-                                </div>
-                            ))}
-                            <div className="w-10 h-10 rounded-full border-2 border-white bg-black text-white flex items-center justify-center text-xs font-bold">
-                                5k+
-                            </div>
-                        </div>
-                        <p className="text-black font-bold text-lg mb-1">Trusted globally</p>
-                        <div className="flex gap-1">
-                            {[1, 2, 3, 4, 5].map((s) => (
-                                <Star key={s} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-
-                {/* Right Side: Content */}
-                <div className="space-y-10">
+                {/* Text Content - Moved up on mobile */}
+                <div className="space-y-10 order-1 lg:order-2">
                     <div className="space-y-6">
                         <div className="flex items-center gap-3">
                             <div className="w-12 h-[2px] bg-brand-green"></div>
@@ -101,6 +59,47 @@ export function WhoWeAre() {
                     </div>
                 </div>
 
+                {/* Left Side: Image Visuals - Moved down on mobile */}
+                <div className="relative order-2 lg:order-1 w-full">
+                    {/* Decorative background shape */}
+                    <div className="absolute top-10 left-[-20px] w-full h-full bg-brand-green/10 rounded-[40px] rotate-[-6deg] z-0 border border-brand-green/20"></div>
+
+                    {/* Main Image */}
+                    <div className="relative z-10 rounded-[32px] overflow-hidden shadow-2xl border border-white/10">
+                        <Image
+                            src="/images/service/pexels-photo-6476260.jpeg"
+                            alt="Team meeting"
+                            width={600}
+                            height={700}
+                            className="object-cover h-[280px] sm:h-[400px] lg:h-[600px] w-full"
+                        />
+                    </div>
+
+                    {/* Floating Review Card - Hidden on small mobile to prevent overflow */}
+                    <div className="hidden sm:block absolute bottom-10 -right-4 lg:-right-10 z-20 bg-white p-6 rounded-2xl shadow-xl max-w-[240px] animate-fade-in-up">
+                        <div className="flex -space-x-3 mb-4">
+                            {[
+                                "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&h=100&auto=format&fit=crop",
+                                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&h=100&auto=format&fit=crop",
+                                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&h=100&auto=format&fit=crop",
+                                "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&h=100&auto=format&fit=crop"
+                            ].map((url, i) => (
+                                <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-neutral-200 overflow-hidden relative">
+                                    <Image src={url} alt="user" fill className="object-cover" />
+                                </div>
+                            ))}
+                            <div className="w-10 h-10 rounded-full border-2 border-white bg-black text-white flex items-center justify-center text-xs font-bold">
+                                5k+
+                            </div>
+                        </div>
+                        <p className="text-black font-bold text-lg mb-1">Trusted globally</p>
+                        <div className="flex gap-1">
+                            {[1, 2, 3, 4, 5].map((s) => (
+                                <Star key={s} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );

@@ -69,8 +69,8 @@ export function Testimonials() {
 
             <div className="flex flex-col gap-8">
                 {/* Row 1: Left Scroll */}
-                <div className="relative flex overflow-hidden group">
-                    <div className="flex gap-8 animate-marquee-left min-w-full">
+                <div className="relative flex overflow-x-auto lg:overflow-hidden group scrollbar-hide snap-x snap-mandatory">
+                    <div className="flex gap-4 md:gap-8 animate-marquee-left min-w-full px-5 lg:px-0">
                         {row1.map((item, i) => (
                             <TestimonialCard key={i} item={item} />
                         ))}
@@ -78,8 +78,8 @@ export function Testimonials() {
                 </div>
 
                 {/* Row 2: Right Scroll */}
-                <div className="relative flex overflow-hidden group">
-                    <div className="flex gap-8 animate-marquee-right min-w-full">
+                <div className="relative flex overflow-x-auto lg:overflow-hidden group scrollbar-hide snap-x snap-mandatory">
+                    <div className="flex gap-4 md:gap-8 animate-marquee-right min-w-full px-5 lg:px-0">
                         {row2.map((item, i) => (
                             <TestimonialCard key={i} item={item} />
                         ))}
@@ -92,7 +92,7 @@ export function Testimonials() {
 
 function TestimonialCard({ item }: { item: typeof testimonials[0] }) {
     return (
-        <div className="flex-shrink-0 w-[400px] bg-white dark:bg-black p-8 rounded-[32px] border border-neutral-100 dark:border-white/5 shadow-sm hover:shadow-md transition-all">
+        <div className="flex-shrink-0 w-[300px] md:w-[400px] bg-white dark:bg-black p-6 md:p-8 rounded-[24px] md:rounded-[32px] border border-neutral-100 dark:border-white/5 shadow-sm hover:shadow-md transition-all snap-center">
             <div className="flex justify-between items-start mb-6">
                 <div className="flex gap-4">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden">

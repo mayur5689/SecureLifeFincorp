@@ -39,10 +39,10 @@ export function Blog() {
                     </h2>
                 </div>
 
-                {/* Blog Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {/* Blog Grid - Horizontal Scroll on Mobile, Grid on Desktop */}
+                <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 overflow-x-auto md:overflow-x-visible pb-8 md:pb-0 scrollbar-hide px-5 -mx-5 md:px-0 md:mx-0 snap-x snap-mandatory">
                     {blogPosts.map((post, index) => (
-                        <div key={index} className="group flex flex-col bg-neutral-50 rounded-[28px] overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-neutral-100">
+                        <div key={index} className="group flex-shrink-0 w-[85vw] sm:w-[45vw] md:w-auto flex flex-col bg-neutral-50 dark:bg-[#0a0a0a] rounded-[28px] overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-neutral-100 dark:border-white/5 snap-center">
                             {/* Image */}
                             <div className="relative h-[200px] w-full overflow-hidden">
                                 <Image
@@ -55,20 +55,20 @@ export function Blog() {
 
                             {/* Content */}
                             <div className="p-6 flex-grow space-y-3">
-                                <div className="inline-block bg-neutral-200/50 px-3 py-1 rounded-md">
-                                    <span className="text-[10px] font-bold text-neutral-600 uppercase tracking-wider">{post.category}</span>
+                                <div className="inline-block bg-neutral-200/50 dark:bg-white/5 px-3 py-1 rounded-md">
+                                    <span className="text-[10px] font-bold text-neutral-600 dark:text-neutral-400 uppercase tracking-wider">{post.category}</span>
                                 </div>
 
-                                <h3 className="text-xl font-bold text-black leading-snug group-hover:text-brand-green transition-colors line-clamp-2">
+                                <h3 className="text-xl font-bold text-black dark:text-white leading-snug group-hover:text-brand-green transition-colors line-clamp-2">
                                     {post.title}
                                 </h3>
 
-                                <p className="text-neutral-500 leading-relaxed text-xs line-clamp-2">
+                                <p className="text-neutral-500 dark:text-neutral-400 leading-relaxed text-xs line-clamp-2">
                                     {post.description}
                                 </p>
 
-                                <div className="pt-3 mt-auto border-t border-neutral-200/60">
-                                    <Link href="/blog" className="inline-flex items-center text-[10px] font-bold uppercase tracking-widest text-black hover:text-brand-green transition-colors">
+                                <div className="pt-3 mt-auto border-t border-neutral-200/60 dark:border-white/5">
+                                    <Link href="/blog" className="inline-flex items-center text-[10px] font-bold uppercase tracking-widest text-black dark:text-white hover:text-brand-green transition-colors">
                                         Learn More
                                         <span className="ml-2 w-4 h-[1px] bg-current transition-all group-hover:w-6"></span>
                                     </Link>
