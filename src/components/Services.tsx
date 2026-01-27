@@ -43,7 +43,7 @@ export function Services() {
                             </span>
                         </div>
                         <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold leading-[1.1] text-black tracking-tight">
-                            Comprehensive Financial Solutions for You & Your Business
+                            Comprehensive Financial Solutions for You & <span className="bg-brand-green px-2 rounded-lg inline-block">Your Business</span>
                         </h2>
                     </div>
                     <div className="flex-shrink-0">

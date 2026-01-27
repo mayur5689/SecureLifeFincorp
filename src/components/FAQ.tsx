@@ -43,7 +43,7 @@ export function FAQ() {
                     <div className="space-y-12">
                         <div className="space-y-4">
                             <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight">
-                                Frequently Asked <br /> Questions
+                                Frequently Asked <span className="bg-brand-green px-3 rounded-lg inline-block">Questions</span>
                             </h2>
                             <p className="text-neutral-500 max-w-lg leading-relaxed">
                                 Discover quick answers to common queries in our comprehensive Frequently Asked Questions section

@@ -35,7 +35,7 @@ export function Blog() {
                         </span>
                     </div>
                     <h2 className="text-3xl md:text-5xl font-bold text-black tracking-tight max-w-2xl mx-auto leading-tight">
-                        Insurance insights and tips
+                        Insurance <span className="bg-brand-green px-3 rounded-lg inline-block">insights and tips</span>
                     </h2>
                 </div>
 

@@ -32,12 +32,12 @@ export function Expertise() {
                             </span>
                         </div>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black">
-                            Comprehensive Financial Services Tailored for You.
+                            Comprehensive Financial Services <span className="bg-brand-green px-2 rounded-lg inline-block">Tailored for You.</span>
                         </h2>
                     </div>
 
                     <Link href="/services">
-                        <button className="bg-brand-green text-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-black hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+                        <button className="bg-black text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-green hover:text-black transition-all duration-300 transform hover:-translate-y-1">
                             View All Offerings
                         </button>
                     </Link>
