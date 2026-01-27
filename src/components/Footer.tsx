@@ -9,9 +9,14 @@ export function Footer() {
             {/* Upper CTA Section (Overlapping) */}
             <div className="max-w-[1250px] mx-auto px-5 relative z-20 -mb-28">
                 <div className="bg-brand-green rounded-[40px] p-12 md:p-20 text-center space-y-8 relative overflow-hidden shadow-2xl">
-                    {/* Subtle Grid Pattern Overlay */}
-                    <div className="absolute inset-0 opacity-10 pointer-events-none"
-                        style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
+                    {/* Modern Grid Pattern Overlay (Centered & Fading) */}
+                    <div className="absolute inset-0 opacity-[0.12] pointer-events-none"
+                        style={{
+                            backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)',
+                            backgroundSize: '40px 40px',
+                            maskImage: 'radial-gradient(circle, black 40%, transparent 90%)',
+                            WebkitMaskImage: 'radial-gradient(circle, black 40%, transparent 90%)'
+                        }}>
                     </div>
 
                     <div className="relative z-10 space-y-4">
