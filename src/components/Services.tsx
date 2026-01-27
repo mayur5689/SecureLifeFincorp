@@ -60,7 +60,7 @@ export function Services() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="group relative h-[500px] rounded-[32px] overflow-hidden flex flex-col justify-end p-8 border border-neutral-100 shadow-sm hover:shadow-2xl transition-all duration-500"
+                            className="group relative h-[420px] rounded-[32px] overflow-hidden flex flex-col justify-end p-8 border border-neutral-100 shadow-sm hover:shadow-2xl transition-all duration-500"
                         >
                             {/* Background Image */}
                             <Image
