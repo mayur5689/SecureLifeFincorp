@@ -2,38 +2,63 @@ import Image from 'next/image';
 
 export function Hero() {
     return (
-        <section className="w-full min-h-screen lg:min-h-screen flex items-center justify-center p-5 pt-[80px] md:pt-[100px] bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
-            <div className="w-full max-w-[1400px] relative">
-                <div className="w-full bg-brand-green rounded-[40px] relative overflow-hidden px-6 md:px-20 pt-12 md:pt-20 flex flex-col min-h-[600px] sm:min-h-[700px] md:min-h-[600px] lg:h-[calc(100vh-140px)]">
-                    <div className="max-w-[700px] z-10 text-center md:text-left relative">
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[72px] font-bold leading-[1.1] text-black mb-4 md:mb-6">
-                            A perfect <span className="bg-white text-black px-3 md:px-4 rounded-lg inline-block">insurance</span> plan created just for you.
+        <section
+            className="w-full flex items-center justify-center p-4 sm:p-5 pt-[80px] md:pt-[100px] bg-white dark:bg-[#0a0a0a] transition-colors duration-300"
+            style={{
+                height: 'clamp(550px, calc(100svh - 20px), 100svh)',
+                maxHeight: '100svh'
+            }}
+        >
+            <div className="w-full max-w-[1400px] relative h-full">
+                <div
+                    className="w-full h-full bg-brand-green rounded-[32px] sm:rounded-[40px] relative overflow-hidden px-5 sm:px-6 md:px-20 flex flex-col items-center md:items-start justify-center md:justify-start md:pt-20"
+                    style={{ paddingTop: 'clamp(1rem, 2vh, 5rem)', paddingBottom: 'clamp(0.5rem, 1vh, 2rem)' }}
+                >
+                    {/* Text Content - Vertically centered on mobile */}
+                    <div className="max-w-[700px] z-10 text-center md:text-left relative flex-shrink-0">
+                        <h1
+                            className="font-bold leading-[1.15] text-black"
+                            style={{ fontSize: 'clamp(1.4rem, 5vw, 4.5rem)', marginBottom: 'clamp(0.4rem, 1vh, 1.5rem)' }}
+                        >
+                            A perfect <span className="bg-white text-black px-2 sm:px-3 md:px-4 rounded-lg inline-block">insurance</span> plan created just for you.
                         </h1>
-                        <p className="text-sm md:text-lg leading-relaxed text-black/80 mb-8 md:mb-10 max-w-[500px] mx-auto md:mx-0">
+                        <p
+                            className="leading-relaxed text-black/80 max-w-[350px] sm:max-w-[500px] mx-auto md:mx-0"
+                            style={{ fontSize: 'clamp(0.7rem, 2vw, 1.125rem)', marginBottom: 'clamp(0.6rem, 1.5vh, 2.5rem)' }}
+                        >
                             Customized strategies to help you secure financial stability, protect your assets, and grow your wealth.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3 md:gap-5">
-                            <button className="bg-black text-white px-9 py-3.5 md:py-[18px] rounded-[14px] text-base md:text-lg font-semibold transition-all hover:bg-neutral-800 hover:-translate-y-0.5 active:scale-95">
+                        <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-2 sm:gap-3 md:gap-5">
+                            <button
+                                className="bg-black text-white rounded-[10px] sm:rounded-[14px] font-semibold transition-all hover:bg-neutral-800 hover:-translate-y-0.5 active:scale-95"
+                                style={{ padding: 'clamp(0.5rem, 1.2vh, 1.125rem) clamp(1.25rem, 4vw, 2.25rem)', fontSize: 'clamp(0.7rem, 2vw, 1.125rem)' }}
+                            >
                                 Get insurance
                             </button>
-                            <button className="bg-transparent text-black border border-black px-9 py-3.5 md:py-[18px] rounded-[14px] text-base md:text-lg font-semibold transition-all hover:bg-black/5 hover:-translate-y-0.5 active:scale-95">
+                            <button
+                                className="bg-transparent text-black border border-black rounded-[10px] sm:rounded-[14px] font-semibold transition-all hover:bg-black/5 hover:-translate-y-0.5 active:scale-95"
+                                style={{ padding: 'clamp(0.5rem, 1.2vh, 1.125rem) clamp(1.25rem, 4vw, 2.25rem)', fontSize: 'clamp(0.7rem, 2vw, 1.125rem)' }}
+                            >
                                 Contact us
                             </button>
                         </div>
                     </div>
 
-                    <div className="relative w-full flex-grow flex items-end justify-center md:justify-end mt-2 md:-mt-[120px] lg:-mt-[180px]">
-                        <div className="relative h-[320px] sm:h-[400px] md:h-full w-full flex items-end justify-center md:justify-end">
-                            <Image
-                                src="/images/hero-bg.png"
-                                alt="Insurance Illustration"
-                                width={1000}
-                                height={580}
-                                priority
-                                className="w-auto h-full max-h-[450px] md:max-h-[650px] object-contain object-bottom translate-y-[-20%] md:translate-y-[-10%] lg:translate-y-[-20%]"
-                            />
-                        </div>
+                    {/* Hero Image - Fixed at bottom */}
+                    <div className="absolute bottom-0 left-0 right-0 flex items-end justify-center md:justify-end md:right-10 lg:right-20 pointer-events-none">
+                        <Image
+                            src="/images/hero-bg.png"
+                            alt="Insurance Illustration"
+                            width={1000}
+                            height={580}
+                            priority
+                            className="w-auto object-contain object-bottom"
+                            style={{
+                                height: 'clamp(140px, 32vh, 650px)',
+                                maxHeight: '45%'
+                            }}
+                        />
                     </div>
                 </div>
             </div>
