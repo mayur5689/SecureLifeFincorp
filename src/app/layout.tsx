@@ -10,6 +10,11 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "SecureLife Fincorp - A perfect insurance plan",
   description: "A perfect insurance plan created just for you.",
+  icons: {
+    icon: "/images/website-logo.png",
+    shortcut: "/images/website-logo.png",
+    apple: "/images/website-logo.png",
+  },
 };
 
 import { ThemeProvider } from "@/components/ThemeProvider";
