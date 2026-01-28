@@ -122,7 +122,7 @@ export function Footer() {
                     {/* Bottom Bar */}
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-500 text-xs md:text-sm font-medium border-t border-white/5 pt-10">
                         <p className="text-center md:text-left">
-                            Copyright © SecureLife Fincorp | Designed By <span className="text-white">Aneeverse</span>
+                            Copyright © SecureLife Fincorp | Designed By <a href="https://www.aneeverse.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-brand-green transition-colors">Aneeverse</a>
                         </p>
                         <div className="flex gap-8">
                             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>

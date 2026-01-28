@@ -18,6 +18,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     // Prevent body scroll when modal is open
     useEffect(() => {
@@ -43,19 +44,41 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setError(null);
 
-        // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    phone: `+91 ${formData.phone}`,
+                    source: 'hero'
+                }),
+            });
 
-        setIsSubmitting(false);
-        setIsSubmitted(true);
+            const data = await response.json();
 
-        // Reset after showing success
-        setTimeout(() => {
-            setIsSubmitted(false);
-            setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
-            onClose();
-        }, 2000);
+            if (!response.ok) {
+                throw new Error(data.error || 'Failed to send message');
+            }
+
+            setIsSubmitted(true);
+
+            // Reset after showing success
+            setTimeout(() => {
+                setIsSubmitted(false);
+                setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
+                onClose();
+            }, 2500);
+
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -215,6 +238,13 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition-all text-sm resize-none"
                                     />
+
+                                    {/* Error Message */}
+                                    {error && (
+                                        <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-red-600 dark:text-red-400 text-sm">
+                                            {error}
+                                        </div>
+                                    )}
 
                                     {/* Submit Button */}
                                     <button
