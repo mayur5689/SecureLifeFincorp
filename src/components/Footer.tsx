@@ -66,36 +66,31 @@ export function Footer() {
                             </div>
                         </div>
 
-                        {/* Product Links */}
+                        {/* Quick Links */}
                         <div className="sm:pl-8">
                             <h4 className="text-xl font-bold mb-8 relative inline-block">
-                                Product
+                                Quick Links
                                 <div className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand-green"></div>
                             </h4>
                             <ul className="space-y-4 text-neutral-400 text-sm">
                                 <li><Link href="/" className="hover:text-brand-green transition-colors">Home</Link></li>
-                                <li><Link href="/about" className="hover:text-brand-green transition-colors">About</Link></li>
-                                <li className="flex items-center gap-2">
-                                    <Link href="/blog" className="hover:text-brand-green transition-colors">Blog</Link>
-                                    <span className="bg-brand-green text-black text-[10px] font-bold px-1.5 py-0.5 rounded leading-none uppercase">CMS</span>
-                                </li>
-                                <li><Link href="/features" className="hover:text-brand-green transition-colors">Features</Link></li>
+                                <li><Link href="/about" className="hover:text-brand-green transition-colors">About Us</Link></li>
+                                <li><Link href="/services" className="hover:text-brand-green transition-colors">Our Services</Link></li>
                                 <li><Link href="/contact" className="hover:text-brand-green transition-colors">Contact</Link></li>
                             </ul>
                         </div>
 
-                        {/* Utility Pages */}
+                        {/* Our Services */}
                         <div className="lg:pl-8">
                             <h4 className="text-xl font-bold mb-8 relative inline-block">
-                                Utility Pages
+                                Our Services
                                 <div className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand-green"></div>
                             </h4>
                             <ul className="space-y-4 text-neutral-400 text-sm">
-                                <li><Link href="#" className="hover:text-brand-green transition-colors">Style Guide</Link></li>
-                                <li><Link href="#" className="hover:text-brand-green transition-colors">Protected</Link></li>
-                                <li><Link href="#" className="hover:text-brand-green transition-colors">Not found</Link></li>
-                                <li><Link href="#" className="hover:text-brand-green transition-colors">Licenses</Link></li>
-                                <li><Link href="#" className="hover:text-brand-green transition-colors">Changelog</Link></li>
+                                <li><Link href="/services/personal-financial-planning" className="hover:text-brand-green transition-colors">Financial Planning</Link></li>
+                                <li><Link href="/services/business-financial-planning" className="hover:text-brand-green transition-colors">Business Planning</Link></li>
+                                <li><Link href="/services/insurance-services" className="hover:text-brand-green transition-colors">Insurance Services</Link></li>
+                                <li><Link href="/services/tax-investment-options" className="hover:text-brand-green transition-colors">Tax & Investments</Link></li>
                             </ul>
                         </div>
 
